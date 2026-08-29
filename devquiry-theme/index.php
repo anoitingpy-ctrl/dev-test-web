@@ -1,0 +1,1 @@
+<?php get_header(); ?><section class="wc-wrap"><div class="wrap"><div class="eyebrow">Devquiry</div><h1 class="sec-title"><?php echo esc_html(get_the_title() ?: 'Devquiry'); ?></h1><?php if(have_posts()): while(have_posts()): the_post(); ?><article style="margin-top:30px"><?php the_content(); ?></article><?php endwhile; endif; ?></div></section><?php get_footer(); ?>
