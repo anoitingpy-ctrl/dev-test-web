@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products — Devquiry</title>
+<meta name="description" content="Browse Devquiry software: practical, licensed digital tools for business, data, developers and everyday productivity.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="products">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-nav" id="siteNav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand" aria-label="Devquiry — home">DEVQUIRY<span class="dot">.</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="products.html" aria-current="page">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Support</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <div class="nav-right">
+      <a class="nav-account" href="account.html">My Account</a>
+      <a class="icon-link" href="cart.html" aria-label="Cart">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count" id="cartCount" hidden>0</span>
+      </a>
+      <a class="btn btn-lime btn-sm" href="products.html">Explore Software</a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <nav class="mm-links" aria-label="Mobile">
+    <a href="products.html">Products <span class="arr">→</span></a>
+    <a href="about.html">About <span class="arr">→</span></a>
+    <a href="contact.html">Support <span class="arr">→</span></a>
+    <a href="index.html#faq">FAQ <span class="arr">→</span></a>
+  </nav>
+  <div class="mm-foot">
+    <div class="mm-sub"><a href="account.html">My Account</a><a href="cart.html">Cart</a></div>
+    <a class="btn btn-lime btn-block" href="products.html">Explore Software <span class="arr">→</span></a>
+  </div>
+</div>
+
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>Products</span></p>
+      <p class="eyebrow">Catalogue</p>
+      <h1 style="margin-top:14px">Software for real work.</h1>
+      <p class="lead">Focused, one-time-purchase tools. Every product below ships with a secure license, instant download and 12 months of updates.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="controls">
+        <div class="chips" role="group" aria-label="Filter by category">
+          <button class="chip active" data-cat="All">All</button>
+          <button class="chip" data-cat="Business">Business</button>
+          <button class="chip" data-cat="Data">Data</button>
+          <button class="chip" data-cat="Developer">Developer</button>
+          <button class="chip" data-cat="Utilities">Utilities</button>
+          <button class="chip" data-cat="Productivity">Productivity</button>
+        </div>
+        <div class="ctrl-right">
+          <div class="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            <input type="search" id="prodSearch" placeholder="Search tools" aria-label="Search software">
+          </div>
+          <div class="sortsel">
+            <select id="prodSort" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+              <option value="name">Name: A–Z</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <p class="results-n" id="resultsN">6 tools</p>
+      <div class="prod-grid" id="prodGrid"></div>
+
+      <div class="assure">
+        <div><b>Secure licensing</b><span>Every order issues a verifiable license key, stored in your account.</span></div>
+        <div><b>Instant delivery</b><span>Download links are ready on the confirmation page — no waiting, ever.</span></div>
+        <div><b>Honest pricing</b><span>One-time purchases with 12 months of updates. No subscriptions.</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html">DEVQUIRY<span class="dot">.</span></a>
+        <p>Software built to work. Practical digital tools, honest pricing, secure licensing.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="products.html">All software</a></li>
+          <li><a href="product.html?id=relaydesk">RelayDesk</a></li>
+          <li><a href="product.html?id=ledgerline">LedgerLine</a></li>
+          <li><a href="product.html?id=sheetsmith">SheetSmith</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Support</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">License Agreement</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Devquiry</span>
+      <span>Built to work — nothing more, nothing less.</span>
+    </div>
+    <div class="foot-word" aria-hidden="true">DEVQUIRY</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

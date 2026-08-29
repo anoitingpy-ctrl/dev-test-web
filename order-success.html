@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order confirmed — Devquiry</title>
+<meta name="description" content="Purchase complete — your Devquiry software download and license key are ready.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="success">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-nav" id="siteNav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand" aria-label="Devquiry — home">DEVQUIRY<span class="dot">.</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Support</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <div class="nav-right">
+      <a class="nav-account" href="account.html">My Account</a>
+      <a class="icon-link" href="cart.html" aria-label="Cart">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count" id="cartCount" hidden>0</span>
+      </a>
+      <a class="btn btn-lime btn-sm" href="products.html">Explore Software</a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <nav class="mm-links" aria-label="Mobile">
+    <a href="products.html">Products <span class="arr">→</span></a>
+    <a href="about.html">About <span class="arr">→</span></a>
+    <a href="contact.html">Support <span class="arr">→</span></a>
+    <a href="index.html#faq">FAQ <span class="arr">→</span></a>
+  </nav>
+  <div class="mm-foot">
+    <div class="mm-sub"><a href="account.html">My Account</a><a href="cart.html">Cart</a></div>
+    <a class="btn btn-lime btn-block" href="products.html">Explore Software <span class="arr">→</span></a>
+  </div>
+</div>
+
+<main id="main">
+  <section class="section" style="padding-top:calc(78px + clamp(30px,4vw,56px))">
+    <div class="wrap">
+      <div class="success">
+        <span class="s-check">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+        </span>
+        <p class="order-chip" id="ordNo">ORDER DV-2026-000001</p>
+        <h1>Purchase complete.</h1>
+        <p class="lead" style="margin-inline:auto">Your software is ready. A confirmation and receipt are on their way to your inbox.</p>
+
+        <div class="lic-box">
+          <p class="k-l">Your <span id="licProduct">RelayDesk</span> license key</p>
+          <p class="lic-key" id="licKey">XXXX-XXXX-XXXX-XXXX</p>
+          <div class="key-row" style="justify-content:center">
+            <button class="btn btn-ghost btn-sm" id="copyKey">Copy key</button>
+          </div>
+          <div id="moreKeys"></div>
+        </div>
+
+        <div class="next-steps">
+          <div class="ns"><b>1 · Download</b><span>Get the installer for your platform — Windows, macOS or Linux.</span></div>
+          <div class="ns"><b>2 · Activate</b><span>Paste your license key in the app to activate up to 3 devices.</span></div>
+          <div class="ns"><b>3 · Verify</b><span>The app confirms your license periodically. You never have to think about it.</span></div>
+        </div>
+
+        <div class="success-btns">
+          <button class="btn btn-dark" data-demo-download>Download Software
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </button>
+          <a class="btn btn-ghost" href="account.html">Go to My Account <span class="arr">→</span></a>
+        </div>
+        <p class="note" style="margin-top:24px">Your downloads and license keys are always available in your account.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html">DEVQUIRY<span class="dot">.</span></a>
+        <p>Software built to work. Practical digital tools, honest pricing, secure licensing.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="products.html">All software</a></li>
+          <li><a href="product.html?id=relaydesk">RelayDesk</a></li>
+          <li><a href="product.html?id=ledgerline">LedgerLine</a></li>
+          <li><a href="product.html?id=sheetsmith">SheetSmith</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Support</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">License Agreement</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Devquiry</span>
+      <span>Built to work — nothing more, nothing less.</span>
+    </div>
+    <div class="foot-word" aria-hidden="true">DEVQUIRY</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Account — Devquiry</title>
+<meta name="description" content="Devquiry account — your orders, downloads, licenses and support in one place.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="account">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-nav" id="siteNav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand" aria-label="Devquiry — home">DEVQUIRY<span class="dot">.</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Support</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <div class="nav-right">
+      <a class="nav-account" href="account.html" aria-current="page">My Account</a>
+      <a class="icon-link" href="cart.html" aria-label="Cart">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count" id="cartCount" hidden>0</span>
+      </a>
+      <a class="btn btn-lime btn-sm" href="products.html">Explore Software</a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <nav class="mm-links" aria-label="Mobile">
+    <a href="products.html">Products <span class="arr">→</span></a>
+    <a href="about.html">About <span class="arr">→</span></a>
+    <a href="contact.html">Support <span class="arr">→</span></a>
+    <a href="index.html#faq">FAQ <span class="arr">→</span></a>
+  </nav>
+  <div class="mm-foot">
+    <div class="mm-sub"><a href="account.html">My Account</a><a href="cart.html">Cart</a></div>
+    <a class="btn btn-lime btn-block" href="products.html">Explore Software <span class="arr">→</span></a>
+  </div>
+</div>
+
+<main id="main">
+  <section class="page-head slim">
+    <div class="wrap">
+      <p class="crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>My Account</span></p>
+      <h1>Your software, organised.</h1>
+      <p class="lead">Orders, downloads and license keys — everything you own, in one calm place.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap acct">
+      <nav class="a-nav" aria-label="Account sections">
+        <button class="active" data-tab="dashboard">Dashboard</button>
+        <button data-tab="orders">Orders</button>
+        <button data-tab="downloads">Downloads</button>
+        <button data-tab="licenses">Licenses</button>
+        <button data-tab="details">Account Details</button>
+        <button data-tab="support">Support</button>
+      </nav>
+
+      <div>
+        <!-- Dashboard -->
+        <div class="pane active" id="pane-dashboard" role="tabpanel">
+          <h2>Welcome back.</h2>
+          <p class="sub">Here’s the state of your Devquiry account at a glance.</p>
+          <div class="stat-chips">
+            <div class="stat-chip"><b id="stProducts">00</b><span>Products owned</span></div>
+            <div class="stat-chip"><b id="stLicenses">00</b><span>Active licenses</span></div>
+            <div class="stat-chip"><b id="stDownloads">00</b><span>Downloads available</span></div>
+            <div class="stat-chip"><b id="stTickets">00</b><span>Open tickets</span></div>
+          </div>
+          <div class="lic-card">
+            <div class="top"><h3>Quick start</h3></div>
+            <p class="sub" style="margin-bottom:16px">New purchase? Download the installer from Downloads, then paste your key from Licenses to activate.</p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+              <a class="btn btn-ghost btn-sm" href="#" data-goto="downloads">Go to Downloads</a>
+              <a class="btn btn-ghost btn-sm" href="#" data-goto="licenses">View Licenses</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Orders -->
+        <div class="pane" id="pane-orders" role="tabpanel">
+          <h2>Orders.</h2>
+          <p class="sub">Complete history of your Devquiry purchases.</p>
+          <table class="tbl">
+            <thead><tr><th scope="col">Order</th><th scope="col">Date</th><th scope="col">Products</th><th scope="col">Status</th><th scope="col" style="text-align:right">Total</th></tr></thead>
+            <tbody id="ordersBody"></tbody>
+          </table>
+        </div>
+
+        <!-- Downloads -->
+        <div class="pane" id="pane-downloads" role="tabpanel">
+          <h2>Downloads.</h2>
+          <p class="sub">Installers for every product you own — grab them any time.</p>
+          <div class="cart-list" id="dlList"></div>
+          <p class="note" style="margin-top:18px">Re-downloads never expire. Install on up to 3 devices per license.</p>
+        </div>
+
+        <!-- Licenses -->
+        <div class="pane" id="pane-licenses" role="tabpanel">
+          <h2>Licenses.</h2>
+          <p class="sub">Your keys, their status, and where they’re activated.</p>
+          <div id="licList"></div>
+        </div>
+
+        <!-- Account details -->
+        <div class="pane" id="pane-details" role="tabpanel">
+          <h2>Account details.</h2>
+          <p class="sub">Keep your contact info current so receipts and updates reach you.</p>
+          <form class="form-card" id="accountForm" style="max-width:560px">
+            <div class="grid-2">
+              <div class="field"><label for="acFirst">First name</label><input type="text" id="acFirst" autocomplete="given-name" value="Alex"></div>
+              <div class="field"><label for="acLast">Last name</label><input type="text" id="acLast" autocomplete="family-name" value="Morgan"></div>
+            </div>
+            <div class="field"><label for="acEmail">Email address</label><input type="email" id="acEmail" autocomplete="email" value="alex@example.com"></div>
+            <div class="field"><label for="acPass">New password</label><input type="password" id="acPass" autocomplete="new-password" placeholder="Leave blank to keep current"></div>
+            <button class="btn btn-dark" type="submit">Save changes</button>
+          </form>
+        </div>
+
+        <!-- Support -->
+        <div class="pane" id="pane-support" role="tabpanel">
+          <h2>Support.</h2>
+          <p class="sub">Real help from the people who build the software.</p>
+          <div class="lic-card">
+            <div class="top"><h3>Email support</h3><span class="pill on">INCLUDED</span></div>
+            <p class="sub" style="margin-bottom:16px">Included with every purchase. Include your order number for the fastest resolution — we reply within one business day.</p>
+            <a class="btn btn-dark btn-sm" href="contact.html">Contact support <span class="arr">→</span></a>
+          </div>
+          <div class="lic-card">
+            <div class="top"><h3>Self-serve answers</h3></div>
+            <p class="sub" style="margin-bottom:16px">Licensing, reinstalls, updates and platform questions are covered in the FAQ.</p>
+            <a class="btn btn-ghost btn-sm" href="index.html#faq">Open FAQ <span class="arr">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html">DEVQUIRY<span class="dot">.</span></a>
+        <p>Software built to work. Practical digital tools, honest pricing, secure licensing.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="products.html">All software</a></li>
+          <li><a href="product.html?id=relaydesk">RelayDesk</a></li>
+          <li><a href="product.html?id=ledgerline">LedgerLine</a></li>
+          <li><a href="product.html?id=sheetsmith">SheetSmith</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Support</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">License Agreement</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Devquiry</span>
+      <span>Built to work — nothing more, nothing less.</span>
+    </div>
+    <div class="foot-word" aria-hidden="true">DEVQUIRY</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+/* quick-start jump links inside the dashboard pane */
+document.querySelectorAll('[data-goto]').forEach(a => a.addEventListener('click', e => {
+  e.preventDefault();
+  document.querySelector(`.a-nav [data-tab="${a.dataset.goto}"]`)?.click();
+}));
+</script>
+</body>
+</html>
